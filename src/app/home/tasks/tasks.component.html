@@ -1,0 +1,5 @@
+<div class="tasks-container" *ngIf="tasks$|async as tasks">
+  <app-task-card *ngFor="let task of tasks"
+  [categories]="categories$|async"
+  [task]="task"></app-task-card>
+</div>

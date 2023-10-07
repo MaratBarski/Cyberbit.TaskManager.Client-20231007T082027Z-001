@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="status">
+        <b>Status:</b>&nbsp;
+        <span [style.color]="color[task.status]">{{task.status}}</span>
+    </div>
+    <div class="title" title="{{task.title}}">
+        {{task.title}}
+    </div>
+    <div title="{{task.description}}" class="descriptions">
+        {{task.description}}
+    </div>
+    <div>
+        <b>Created:</b>&nbsp;{{task.creationTime|date}}
+    </div>
+    <div>
+        <b>Due Date:</b>&nbsp;{{task.dueDate|date}}
+    </div>
+    <div class="user">
+        {{task.userName}}
+    </div>
+    <div>
+        <div *ngFor="let c of task.categories">
+            {{c}} <button (click)="deleteCategory(c)">X</button>
+        </div>
+    </div>
+    <select (change)="addCategory()" [(ngModel)]="currentCategory">
+        <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
+    </select>
+</div>

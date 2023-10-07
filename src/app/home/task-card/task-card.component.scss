@@ -1,0 +1,30 @@
+.main {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #000;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.status {
+    justify-content: end;
+    display: flex;
+}
+.title {
+    white-space: nowrap;
+    font-weight: bold;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.descriptions {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    text-align: justify;
+}
+.user{
+    text-transform: capitalize;
+}
